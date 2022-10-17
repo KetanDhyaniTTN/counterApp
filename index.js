@@ -3,7 +3,8 @@
  */
 
 import {AppRegistry} from 'react-native';
-import OTP from './OTP';
+import newproject from './newproject';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () =>OTP);
+
+AppRegistry.registerComponent(appName,()=>newproject);
