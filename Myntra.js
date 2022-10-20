@@ -6,7 +6,7 @@ export default class Myntra extends Component {
 
       <SafeAreaView style={styles.container}>
         <ScrollView>
-          <View style={styles.headerWrapper}>
+          <View style={styles.headerCont}>
             <View style={styles.headerLeftCont}>
               <Text style={styles.itemsText}>195 items</Text>
             </View>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   container:{
     backgroundColor:'white',
   },
-  headerWrapper: {
+  headerCont: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 10,

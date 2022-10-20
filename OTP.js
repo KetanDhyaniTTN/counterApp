@@ -16,12 +16,13 @@ class OTP extends Component {
             
            
 
-                <View>
-                <View style={styles.containerHeader}>
+                <View style={{flex:1}}>
+
+                <SafeAreaView style={styles.containerHeader}>
 
                     <Text style={styles.textHeader}>Log into Saavn</Text>
 
-                </View>
+                </SafeAreaView>
 
                 <View style={styles.containerMid}>
                     <Text style={styles.textMid}>Enter your Code</Text>
@@ -131,19 +132,7 @@ class OTP extends Component {
                         />
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-                    </View>
+                      </View>
 
                     <View style={styles.continueButton}>
                         <TouchableOpacity style={styles.buttonGreen} >
@@ -153,6 +142,8 @@ class OTP extends Component {
                     </View>
 
                 </View>
+                </View>
+                
                 
 
 
@@ -166,7 +157,7 @@ class OTP extends Component {
         );
 
     };
-},
+}
 const styles = StyleSheet.create({
     containerHeader: {
         
