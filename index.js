@@ -3,8 +3,9 @@
  */
 
 import {AppRegistry} from 'react-native';
-import newproject from './newproject';
+import Tabs from './Tabs';
 import {name as appName} from './app.json';
 
 
-AppRegistry.registerComponent(appName,()=>newproject);
+
+AppRegistry.registerComponent(appName,()=>Tabs);

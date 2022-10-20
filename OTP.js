@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, TextInput, SafeAreaView ,TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TextInput, SafeAreaView, TouchableOpacity } from "react-native";
 class OTP extends Component {
     constructor(props) {
         super(props);
@@ -14,14 +14,13 @@ class OTP extends Component {
     render() {
         return (
             
-                
-            <SafeAreaView >
-
            
-            <View style={styles.containerHeader}>
-              
+
+                <View>
+                <View style={styles.containerHeader}>
+
                     <Text style={styles.textHeader}>Log into Saavn</Text>
-              
+
                 </View>
 
                 <View style={styles.containerMid}>
@@ -29,66 +28,78 @@ class OTP extends Component {
 
                     <View style={styles.inputOne}>
                         <TextInput
-                           
+
                             style={styles.inputText}
-                            
+
                             ref={'numbOne'}
                             keyboardType='numeric'
                             autoFocus={true}
                             maxLength={1}
-                           
-                            
-                            onChangeText={(numbOne)=>{
-                                this.setState({ numbOne:''})
-                               
+
+
+                            onChangeText={(numbOne) => {
+                                this.setState({ numbOne: numbOne })
+
                                 if (numbOne != "") {
                                     this.refs.numbTwo.focus();
                                 }
-                                else if (numbOne=="") {
 
-                                    this.refs.numbOne.focus();
-                                }
-                              }
                             }
-                            />
-                           
-                            
-                             
+                            }
+                        />
+
+
+
                         <TextInput
                             ref={'numbTwo'}
                             keyboardType='numeric'
                             style={styles.inputText}
                             maxLength={1}
                             onChangeText={(numbTwo) => {
-                                this.setState({ numbTwo:''})
+                                this.setState({ numbTwo: numbTwo })
                                 if (numbTwo != "") {
                                     this.refs.numbThree.focus();
                                 }
-                                else if (numbTwo=="") {
 
-                                    this.refs.numbOne.focus();
-                                }
                             }
-                            } />
+
+                            }
+                            onKeyPress={({ nativeEvent }) => {
+                                if (
+                                    nativeEvent.key === 'Backspace' &&
+                                    this.state.numbTwo == '' &&
+                                    this.state.numbOne != ''
+                                ) {
+                                    this.refs.numbOne.focus();
+                                    this.setState({ numbOne: '' });
+                                }
+                            }} />
 
                         <TextInput
-                         ref={'numbThree'}
-                         keyboardType='numeric'
+                            ref={'numbThree'}
+                            keyboardType='numeric'
                             style={styles.inputText}
                             maxLength={1}
-                            
+
                             onChangeText={(numbThree) => {
-                                this.setState({ numbThree:''})
+                                this.setState({ numbThree: numbThree })
                                 if (numbThree != "") {
                                     this.refs.numbFour.focus();
                                 }
-                                else if (numbThree=="") {
 
-                                    this.refs.numbTwo.focus();
-                                }
                             }
 
-                            } />
+                            }
+                            onKeyPress={({ nativeEvent }) => {
+                                if (
+                                    nativeEvent.key === 'Backspace' &&
+                                    this.state.numbThree == '' &&
+                                    this.state.numbTwo != ''
+                                ) {
+                                    this.refs.numbTwo.focus();
+                                    this.setState({ numbTwo: '' });
+                                }
+                            }} />
 
 
 
@@ -97,19 +108,26 @@ class OTP extends Component {
                             style={styles.inputText}
                             maxLength={1}
                             onChangeText={(numbFour) => {
-                                this.setState({ numbFour: '' })
+                                this.setState({ numbFour: numbFour })
 
-                                if (numbFour== "") {
+                                if (numbFour == "") {
 
                                     this.refs.numbThree.focus();
                                 }
-                                  else if (numbFour != "") {
 
-                                     alert('submit')
+                            }
+
+                            }
+                            onKeyPress={({ nativeEvent }) => {
+                                if (
+                                    nativeEvent.key === 'Backspace' &&
+                                    this.state.numbFour == '' &&
+                                    this.state.numbThree != ''
+                                ) {
+                                    this.refs.numbThree.focus();
+                                    this.setState({ numbThree: '' });
                                 }
-                            }
-
-                            }
+                            }}
                         />
 
 
@@ -126,45 +144,46 @@ class OTP extends Component {
 
 
                     </View>
-                   
+
                     <View style={styles.continueButton}>
                         <TouchableOpacity style={styles.buttonGreen} >
                             <Text style={styles.textButton}>Continue</Text >
-                           
+
                         </TouchableOpacity>
                     </View>
 
                 </View>
+                
 
 
 
 
-          
 
-            </SafeAreaView>
-            
+
+           
+
 
         );
 
     };
-}
+},
 const styles = StyleSheet.create({
-     containerHeader: {
+    containerHeader: {
         
         backgroundColor: "green",
-        
+
 
     },
     textHeader: {
-        fontSize: 20,
-        fontWeight: '500',
+        fontSize: 18,
+        fontWeight: '600',
         color: 'white',
         textAlign: 'center',
         padding: 10,
     },
     containerMid: {
         // backgroundColor: 'white',
-        flexDirection:'column'
+        flexDirection: 'column'
     },
     textMid: {
         fontSize: 20,
@@ -174,7 +193,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     inputText: {
-       
+
         height: 50,
         margin: 8,
         width: 50,
@@ -193,12 +212,13 @@ const styles = StyleSheet.create({
 
     },
     continueButton: {
-      alignItems:'center'
-    },
+        flexDirection:'row',
+        justifyContent: 'center'
+    },   
     buttonGreen: {
-        width:200,
+        width: 250,
         margin: 12,
-      padding:10,
+        padding: 10,
         borderWidth: 0.5,
         borderColor: 'green',
         borderTopWidth: 1.5,
@@ -210,9 +230,9 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: '100',
         color: 'green',
-       alignSelf:'center',
+        alignSelf: 'center',
 
-   
+
 
     },
 

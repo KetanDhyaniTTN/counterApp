@@ -106,8 +106,8 @@ const styles = StyleSheet.create({
     },
     textHeader: {
         bottom:5,
-        fontSize: 18,
-        fontWeight: '200',
+        fontSize: 17,
+        fontWeight: '600',
         color: "black",
       },
 
