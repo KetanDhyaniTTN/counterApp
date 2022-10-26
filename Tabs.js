@@ -5,11 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Myntra from './Myntra';
 const Tab = createBottomTabNavigator();
 
-class Categories extends Component {
-    render() {
-      alert('empty');
-    }
-  }
+
 class Tabs extends Component {
     render() {
         return (
