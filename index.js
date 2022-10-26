@@ -3,9 +3,9 @@
  */
 
 import {AppRegistry} from 'react-native';
-import AssignWeb from './AssignWeb';
+import Slider from './Slider';
 import {name as appName} from './app.json';
 
 
 
-AppRegistry.registerComponent(appName,()=>AssignWeb);
+AppRegistry.registerComponent(appName,()=>Slider);
