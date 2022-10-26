@@ -3,9 +3,9 @@
  */
 
 import {AppRegistry} from 'react-native';
-import Slider from './Slider';
+import SectionQue  from './SectionQue';
 import {name as appName} from './app.json';
 
 
 
-AppRegistry.registerComponent(appName,()=>Slider);
+AppRegistry.registerComponent(appName,()=>SectionQue);
