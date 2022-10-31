@@ -5,9 +5,9 @@
 import {Alert, AppRegistry} from 'react-native';
 
 import {name as appName} from './app.json';
-import AlertTab from './AlertTab';
+import AnimatedRotate from './AnimatedRotate';
 
 
 
 
-AppRegistry.registerComponent(appName,()=>AlertTab);
+AppRegistry.registerComponent(appName,()=>AnimatedRotate);
