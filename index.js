@@ -5,9 +5,9 @@
 import {Alert, AppRegistry} from 'react-native';
 
 import {name as appName} from './app.json';
-import AnimatedRotate from './AnimatedRotate';
+import AnimatedTwo from './AnimatedTwo';
 
 
 
 
-AppRegistry.registerComponent(appName,()=>AnimatedRotate);
+AppRegistry.registerComponent(appName,()=>AnimatedTwo);
