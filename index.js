@@ -2,10 +2,12 @@
  * @format
  */
 
-import {AppRegistry} from 'react-native';
-import SectionQue  from './SectionQue';
+import {Alert, AppRegistry} from 'react-native';
+
 import {name as appName} from './app.json';
+import AlertTab from './AlertTab';
 
 
 
-AppRegistry.registerComponent(appName,()=>SectionQue);
+
+AppRegistry.registerComponent(appName,()=>AlertTab);

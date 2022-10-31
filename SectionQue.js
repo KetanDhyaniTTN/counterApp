@@ -90,7 +90,7 @@ const data = [
   
 
 const Item = ({ title }) => (
-    <View style={styles.item}>
+    <View style={styles.itemView}>
       <Text style={styles.title}>{title}</Text>
     </View>
   );
@@ -122,13 +122,13 @@ const SectionLists = () => {
   });
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.containerMain}>
     <SectionList
       sections={structuredData}
       keyExtractor={(item, index) => item + index}
       renderItem={({ item }) => <Item title={item} />}
       renderSectionHeader={({ section }) => (
-        <Text style={styles.header}>{section.categoryId}</Text>
+        <Text style={styles.headerMain}>{section.categoryId}</Text>
       )}
     />
   </SafeAreaView>
@@ -136,16 +136,16 @@ const SectionLists = () => {
 };
 
 const styles = StyleSheet.create({
-    container: {
+    containerMain: {
       flex: 1,
       marginHorizontal: 16
     },
-    item: {
+    itemView: {
       backgroundColor: "pink",
       padding: 20,
       marginVertical: 8
     },
-    header: {
+    headerMain: {
       fontSize: 32,
       backgroundColor: "white"
     },

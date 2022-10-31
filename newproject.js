@@ -7,7 +7,6 @@ import HomeScreen from './homescreen';
 import Ticket from "./Ticket"; 
 import TwitterLogin from "./TwitterLogin";
 import { Component } from 'react/cjs/react.production.min';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 const Stack = createNativeStackNavigator();
 
  class newproject extends Component{
@@ -19,7 +18,7 @@ const Stack = createNativeStackNavigator();
                 <Stack.Screen name="AssignmentOne" component={TwitterLogin} />
                <Stack.Screen name="AssignmentTwo" component={Ticket} />
                <Stack.Screen name="AssignmentThree" component={OTP} /> 
-              </Stack.Navigator>
+                </Stack.Navigator>
             </NavigationContainer>
            );
     }

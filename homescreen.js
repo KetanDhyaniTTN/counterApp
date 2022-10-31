@@ -22,6 +22,18 @@ export class Homescreen extends Component {
                     <Text style={styles.textHome}>AssignmentThree</Text>
 
                 </TouchableOpacity>
+
+                <TouchableOpacity style={styles.buttonAssign}
+                    onPress={() => this.props.navigation.navigate("Assignment Alert")} >
+                    <Text style={styles.textHome}>AssignmentAlert</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.buttonAssign}
+                    onPress={() => this.props.navigation.navigate("Assignment Clipboard")} >
+                    <Text style={styles.textHome}>Assignment Clipboard</Text>
+
+                </TouchableOpacity>
+                
             </View>
         )
     }
