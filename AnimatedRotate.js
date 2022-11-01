@@ -27,7 +27,7 @@ class RotateTask extends Component {
     componentDidMount = () => {
 
         Animated.loop(Animated.timing(this.state.xAxis, {
-            toValue: this.widthScreen - 133,
+            toValue: this.widthScreen - 130,
             duration: 5000,
             useNativeDriver: false
         })).start();
@@ -51,25 +51,25 @@ class RotateTask extends Component {
         })).start();
 
         Animated.loop(Animated.timing(this.state.xAxisTwo, {
-            toValue: this.widthScreen-143,
+            toValue: this.widthScreen-140,
             duration: 5000,
             useNativeDriver: false,
         })).start();
 
         Animated.loop(Animated.timing(this.state.yAxisTwo, {
-            toValue: -this.heightScreen+155,
+            toValue: -this.heightScreen+160,
             duration: 5000,
             useNativeDriver: false
         })).start();
 
         Animated.loop(Animated.timing(this.state.xAxisThree, {
-            toValue: -this.widthScreen+143,
+            toValue: -this.widthScreen+140,
             duration: 5000,
             useNativeDriver: false,
         })).start();
 
         Animated.loop(Animated.timing(this.state.yAxisThree, {
-            toValue: -this.heightScreen+155,
+            toValue: -this.heightScreen+150,
             duration: 5000,
             useNativeDriver: false
         })).start();
@@ -92,7 +92,7 @@ class RotateTask extends Component {
         return (
             <View style={styles.containerRotate}>
               <Animated.View style={[styles.textOne,{ opacity: this.state.fadeText }]}>
-                    <Animated.Text style={[styles.texts, {
+                    <Animated.Text style={[styles.animatedText, {
                         transform: [
                             { translateX: this.state.xAxis },
                             { translateY: this.state.yAxis },
@@ -110,7 +110,7 @@ class RotateTask extends Component {
                 </Animated.View>
 
                 <Animated.View style={[styles.textTwo,{ opacity: this.state.fadeText }]}>
-                    <Animated.Text style={[styles.texts, {
+                    <Animated.Text style={[styles.animatedText, {
                         transform: [
                             { translateX: this.state.xAxisOne },
                             { translateY: this.state.yAxisOne },
@@ -128,7 +128,7 @@ class RotateTask extends Component {
                 </Animated.View>
 
                 <Animated.View style={[styles.textThree,{ opacity: this.state.fadeText }]}>
-                    <Animated.Text style={[styles.texts, {
+                    <Animated.Text style={[styles.animatedText, {
                         transform: [
                             { translateX: this.state.xAxisTwo },
                             { translateY: this.state.yAxisTwo },
@@ -145,7 +145,7 @@ class RotateTask extends Component {
                 </Animated.View>
 
                 <Animated.View style={[styles.textFour,{ opacity: this.state.fadeText }]}>
-                    <Animated.Text style={[styles.texts, {
+                    <Animated.Text style={[styles.animatedText, {
                         transform: [
                             { translateX: this.state.xAxisThree },
                             { translateY: this.state.yAxisThree },
@@ -168,6 +168,7 @@ class RotateTask extends Component {
 const styles = StyleSheet.create({
     containerRotate: {
         flex: 1,
+        backgroundColor:'powderblue'
     },
     textOne:{
         position:'absolute',
@@ -187,10 +188,18 @@ const styles = StyleSheet.create({
         bottom:10,
         right:3,
     },
-    texts: {
+    animatedText: {
         color: 'red',
-        fontSize: 45,
+        fontSize: 50,
         fontWeight:'500'
     },
 });
 export default RotateTask;
+
+
+
+
+
+
+
+

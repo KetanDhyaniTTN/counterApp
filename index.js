@@ -5,9 +5,9 @@
 import {Alert, AppRegistry} from 'react-native';
 
 import {name as appName} from './app.json';
-import AnimatedTwo from './AnimatedTwo';
+import AlertTab from './AlertTab';
 
 
 
 
-AppRegistry.registerComponent(appName,()=>AnimatedTwo);
+AppRegistry.registerComponent(appName,()=>AlertTab);

@@ -3,9 +3,9 @@ import { View, Text, StyleSheet, Button, Image, ScrollView, TouchableOpacity } f
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
-import OTP from './OTP'; 
+import OTP from './OTPScreen'; 
 import HomeScreen from './homescreen'; 
-import Ticket from "./Ticket"; 
+import Ticket from "./TicketScreen"; 
 import TwitterLogin from "./TwitterLogin";
 import ReactAlert from './ReactAlert';
 import Clipboard from './Clipboard'
