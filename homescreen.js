@@ -1,39 +1,55 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 
 
 export class Homescreen extends Component {
     render() {
         return (
             <View style={styles.homeButton}>
-                <TouchableOpacity style={styles.buttonAssign} 
-                    onPress={() => this.props.navigation.navigate("AssignmentOne")} >
+                <ScrollView>
+                    <TouchableOpacity style={styles.buttonAssign}
+                        onPress={() => this.props.navigation.navigate("AssignmentOne")} >
 
-                    <Text style={styles.textHome}>AssignmentOne</Text >
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.buttonAssign}
-                    onPress={() => this.props.navigation.navigate("AssignmentTwo")} >
-                    <Text style={styles.textHome}>AssignmentTwo</Text>
-
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonAssign}
-                    onPress={() => this.props.navigation.navigate("AssignmentThree")} >
-                    <Text style={styles.textHome}>AssignmentThree</Text>
-
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.buttonAssign}
-                    onPress={() => this.props.navigation.navigate("Assignment Alert")} >
-                    <Text style={styles.textHome}>AssignmentAlert</Text>
+                        <Text style={styles.textHome}>AssignmentOne</Text >
                     </TouchableOpacity>
 
                     <TouchableOpacity style={styles.buttonAssign}
-                    onPress={() => this.props.navigation.navigate("Assignment Clipboard")} >
-                    <Text style={styles.textHome}>Assignment Clipboard</Text>
+                        onPress={() => this.props.navigation.navigate("AssignmentTwo")} >
+                        <Text style={styles.textHome}>AssignmentTwo</Text>
 
-                </TouchableOpacity>
-                
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.buttonAssign}
+                        onPress={() => this.props.navigation.navigate("AssignmentThree")} >
+                        <Text style={styles.textHome}>AssignmentThree</Text>
+
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.buttonAssign}
+                        onPress={() => this.props.navigation.navigate("Assignment Alert")} >
+                        <Text style={styles.textHome}>AssignmentAlert</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.buttonAssign}
+                        onPress={() => this.props.navigation.navigate("Assignment Clipboard")} >
+                        <Text style={styles.textHome}>Assignment Clipboard</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.buttonAssign}
+                        onPress={() => this.props.navigation.navigate("LoginScreen")} >
+                        <Text style={styles.textHome}>LoginScreen</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.buttonAssign}
+                        onPress={() => this.props.navigation.navigate("ShowInfo")} >
+                        <Text style={styles.textHome}>ShowInfo</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.buttonAssign}
+                        onPress={() => this.props.navigation.navigate("HomePage")} >
+                        <Text style={styles.textHome}>HomePage</Text>
+                    </TouchableOpacity>
+                </ScrollView>
+
             </View>
         )
     }
@@ -43,7 +59,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#3457D5",
         borderRadius: 50,
         width: 150,
-        marginVertical: 70,
+        marginVertical: 50,
         padding: 8,
         marginHorizontal: 120,
         marginBottom: 5,
@@ -56,12 +72,9 @@ const styles = StyleSheet.create({
         fontWeight: '600',
     },
     homeButton: {
-         flexDirection: 'column',
-        
-        flex:1,
-        backgroundColor:'grey',
-        
-
+        flex: 1,
+        flexDirection: 'column',
+        backgroundColor: 'grey',
     },
 
 })

@@ -1,11 +1,15 @@
 import * as React from 'react';
-import { View, Text,  } from "react-native";
+import { View, Text,} from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import OTP from './OTP'; 
+import OTPScreen from './OTPScreen'; 
 import HomeScreen from './homescreen'; 
-import Ticket from "./Ticket"; 
+import TicketScreen from "./TicketScreen"; 
 import TwitterLogin from "./TwitterLogin";
+//import  AsyncStorage  from './AsyncStorage';
+import LoginScreen from './LoginScreen';
+import ShowInfo from './ShowInfo';
+import HomePage from './HomePage';
 import { Component } from 'react/cjs/react.production.min';
 const Stack = createNativeStackNavigator();
 
@@ -16,8 +20,11 @@ const Stack = createNativeStackNavigator();
               <Stack.Navigator>
                <Stack.Screen name="HomeScreen" component={HomeScreen}/>
                 <Stack.Screen name="AssignmentOne" component={TwitterLogin} />
-               <Stack.Screen name="AssignmentTwo" component={Ticket} />
-               <Stack.Screen name="AssignmentThree" component={OTP} /> 
+               <Stack.Screen name="AssignmentTwo" component={TicketScreen} />
+               <Stack.Screen name="AssignmentThree" component={OTPScreen} /> 
+               <Stack.Screen name="LoginScreen" component={LoginScreen} /> 
+               <Stack.Screen name="ShowInfo" component={ShowInfo} /> 
+               <Stack.Screen name="HomePage" component={HomePage} /> 
                 </Stack.Navigator>
             </NavigationContainer>
            );

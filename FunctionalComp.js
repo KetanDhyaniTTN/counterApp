@@ -173,7 +173,7 @@ const FunctionalComp = () => {
   let newRef = useRef(null)
   const [button, setbutton] = useState('false')
 
-  const imageSize = useCallback(((_, index) => (
+  const imageSize = useCallback(((_,index) => (
     { length: 247, offset: 247 * index, index }
   )))
 
